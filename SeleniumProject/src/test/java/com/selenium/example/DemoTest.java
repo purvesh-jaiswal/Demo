@@ -1,13 +1,34 @@
 package com.selenium.example;
 
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class DemoTest {
 
-	@Test
-	public void start(){
+private WebDriver driver;
+	
+	@BeforeTest
+	public void setup(){
+		 System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		driver = new ChromeDriver();
 		
-		System.out.println("hello selenium ... this is first test on selenium");
+	}
+	
+	@AfterTest
+	public void trminate(){
+		
+		driver.quit();
+		
+	}
+	
+	@Test
+	public void StartTest(){
+		
+		driver.navigate().to("https://www.youtube.com/");
 		
 	}
 	
