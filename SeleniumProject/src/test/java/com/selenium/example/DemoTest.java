@@ -8,12 +8,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class DemoTest {
+	
+	static String path = "/usr/share/chromedriver";
 
 private WebDriver driver;
 	
 	@BeforeTest
 	public void setup(){
-		 System.setProperty("webdriver.chrome.driver", "chromedriver");
+		 System.setProperty("webdriver.chrome.driver", path);
 		driver = new ChromeDriver();
 		
 	}
