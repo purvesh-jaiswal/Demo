@@ -13,7 +13,7 @@ private WebDriver driver;
 	
 	@BeforeTest
 	public void setup(){
-		 System.setProperty("webdriver.chrome.driver", "chromedriver");
+		 System.setProperty("webdriver.chrome.driver", "/root/chromedriver");
 		driver = new ChromeDriver();
 		
 	}
